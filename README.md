@@ -55,10 +55,10 @@ Here is an example of the robot localizing itself. Another example was shown in 
 ![Example image](screenshots/2.png)
 
 It appears that the localization performs better when the robot is moving straight compared to when it is rotating. The image below has been taken after a simple 180° rotation of the robot on itself. The particles are much more spread out around the robot, showing a bigger uncertainty on the real pose.
-![Example image](screenshots/higher uncertainty after rotation.png)
+![Example image](screenshots/higher_uncertainty_after_rotation.png)
 
 After commanding the robot to go straight for a small distance, the particles form again a very narrow cloud around the robot's location.
-![Example image](screenshots/lower after going straight.png)
+![Example image](screenshots/lower_afte_ goin_ straight.png)
 
 ### Simulating the "kidnapped robot" problem
 The kidnapped robot problem is the most difficult problem to solve in localization. It consists of moving the robot to a different pose without giving the robot any clue, and see whether it is capable of recovering its real pose again. In order to try this here, it is possible to command the robot to a certain pose, then deactivate the amcl node and reactivate it so that the robot believes it is located at its initial pose. Then, the robot can be moved to see whether the particles manage to find the robot's real pose again or not.
