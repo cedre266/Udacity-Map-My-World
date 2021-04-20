@@ -49,6 +49,7 @@ roslaunch my_robot amcl.launch
 
 ## Related Documentation
 The amcl package: http://wiki.ros.org/amcl
+
 Create the map: https://github.com/udacity/pgm_map_creator
 
 ## Illustrations and Comments
