@@ -50,6 +50,8 @@ roslaunch my_robot amcl.launch
 ## Related Documentation
 The amcl package: http://wiki.ros.org/amcl
 
+Create the map: https://github.com/udacity/pgm_map_creator
+
 ## Illustrations and Comments
 Here is an example of the robot localizing itself. Another example was shown in the overview section. In both images, it can be seen that the particles are well located around the robot's real pose, and that the laser scans are well aligned with the map.
 ![Example image](screenshots/2.png)
