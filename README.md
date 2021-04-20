@@ -60,7 +60,7 @@ It appears that the localization performs better when the robot is moving straig
 ![Example image](screenshots/higher_uncertainty_after_rotation.png)
 
 After commanding the robot to go straight for a small distance, the particles form again a very narrow cloud around the robot's location.
-![Example image](screenshots/lower_afte_ goin_ straight.png)
+![Example image](screenshots/lower_afte_goin_straight.png)
 
 ### Simulating the "kidnapped robot" problem
 The kidnapped robot problem is the most difficult problem to solve in localization. It consists of moving the robot to a different pose without giving the robot any clue, and see whether it is capable of recovering its real pose again. In order to try this here, it is possible to command the robot to a certain pose, then deactivate the amcl node and reactivate it so that the robot believes it is located at its initial pose. Then, the robot can be moved to see whether the particles manage to find the robot's real pose again or not.
