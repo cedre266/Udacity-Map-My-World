@@ -40,9 +40,13 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 roslaunch my_robot mapping.launch
 ```
 - Now use the teleoperation to move the robot around in the map. When having finished, shut down the mapping node. It will save the database as `~/.ros/rtabmap.db`.
-- In order to view the results, we can use the database viewer provided with the RTAB-Map package:
+- In order to view the results, we can use the database viewer provided with the RTAB-Map package. By default, there are saved to the `~/.ros/` folder. This can be changed in `mapping.launch` if needed.
 ```
 rtabmap-databaseViewer ~/.ros/rtabmap.db
+```
+If you want to open the file already there in the repository, replace the path to point to the file `rtabmap_final.db`:
+```
+rtabmap-databaseViewer PATH/TO/rtabmap_final.db
 ```
 - Say yes to using the database parameters
     - `View` -> `Constraint View`
