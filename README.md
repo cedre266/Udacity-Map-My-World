@@ -67,4 +67,20 @@ rtabmap-databaseViewer PATH/TO/rtabmap_final.db
 The RTAB-Map package: http://wiki.ros.org/rtabmap_ros
 
 ## Illustrations and Comments
+Multiple tries were necessary to obtain a successful map with loop closures. Please view the video in overview for a successful one.
+Previous ones were facing two main issues:
+- The first issue is to not have enough features in the simulated world. Because of not having enough visual clues, the robot could not identify places it had already visited before in order to find loop closures. The result was a good map overall, but it could not have scaled to be used on bigger maps, since a longer mapping would have resulted in a drift appearing over time, without having any loop closure to counter that. The issue was solved by adding additional features in the simulated world.
 
+World with too few features:
+![Example image](screenshots/world_few_features.png)
+
+2D map and trajectory obtained, but not a single loop closure detected, though parts of the trajectory clearly overlap:
+![Example image](screenshots/trajectory_few_features.png)
+
+- The second issue is to have wrong loop closures. If the robot's trajectory overlaps are too short or not close enough, loop closures will be detected and will try to optimize the trajectory so that two places that are not really the same get merged, resulting in significant shifts in the map. This issue can be solved by having better trajectory overlaps.
+
+This is a trajectory that did not have good enough overlaps. Note how it detected loop closures that connected points of the trajectory that were not always very close to each other, like at the top of the image (red line):
+![Example image](screenshots/trajectory_bad_optimization.png)
+
+This is the resulting map. Wrong loop closures clearly created problems in the mapping. Walls are not aligned and some objects appear 3 or 4 times due to misalignments:
+![Example image](screenshots/map_bad_optimization.png)
