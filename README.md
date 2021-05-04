@@ -57,8 +57,9 @@ rtabmap-databaseViewer PATH/TO/rtabmap_final.db
     - `Ok`
 
 ## Launch files
-- **`world.launch`**: launches the Gazebo with the saved world, launches `robot_description.launch` which finds the xacro description file of the robot and sends the robot states to tf, spawns the robot at the specified initial pose and launches Rviz
+- **`world.launch`**: launches the Gazebo with the saved world, launches `robot_description.launch` which finds the xacro description file of the robot and sends the robot states to tf, spawns the robot at the specified initial pose
 - **`mapping.launch`**: launches the `rtabmap` node, remapping input parameters to this particular robot and setting other parameters such as those for output, loop closure, feature detection, etc
+- **`localization.launch`**: launches the `rtabmap` node in localization mode, meaning that instead of creating a map, it is using an already existing map to detect if current images from the robot correspond to images in the map (loop closures) in order to localize itself
 
 ## Related Documentation
 The RTAB-Map package: http://wiki.ros.org/rtabmap_ros
