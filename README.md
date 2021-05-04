@@ -4,7 +4,9 @@
 Fourth project in Udacity's Robotics Software Engineer Nanodegree. The goal of the project is to implement RTAB-Map, a ROS package for visual SLAM using a laser range finder with a RGB-D camera.
 This was implemented leveraging the same world and robot created in the previous projects of the same course.
 
-image?
+Video:
+
+[![Demo Video](https://img.youtube.com/vi/IW3tygQMhBc/0.jpg)](https://www.youtube.com/watch?v=ZymFv-S-eno)
 
 Made under ROS-Kinetic and Gazebo-7.
 
