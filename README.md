@@ -6,7 +6,7 @@ This was implemented leveraging the same world and robot created in the previous
 
 Video:
 
-[![Demo Video](https://img.youtube.com/vi/IW3tygQMhBc/0.jpg)](https://www.youtube.com/watch?v=ZymFv-S-eno)
+[![Demo Video](https://img.youtube.com/vi/ZymFv-S-eno/0.jpg)](https://www.youtube.com/watch?v=ZymFv-S-eno)
 
 Made under ROS-Kinetic and Gazebo-7.
 
